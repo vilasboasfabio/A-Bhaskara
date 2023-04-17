@@ -22,12 +22,24 @@ function baskhara() {
 // caso algum campo não seja preenchido aparecera um alert
     if (a == '' || b == '' || c == '') {
         alert('coloque valores validos em "a", "b" e "c" ');
+        document.getElementById('x1').innerHTML = ``;
+        document.getElementById('x2').innerHTML = ``;
     } else if (delta < 0 ) {
 // caso o delta seja menor que 0 ele não tem soluções
         result.innerHTML = `Não há soluções reais!`;
-    } else if (raiz % 1 !== 0 ){
+        document.getElementById('x1').innerHTML = ``;
+        document.getElementById('x2').innerHTML = ``;
+    } else if (delta == 0) { if (x2 > x1) {
+        let sob1 = x1 % 2;
+        if (sob1 == 0) {
+            document.getElementById('x1').innerHTML = `Só há um resultado de x é ${x1} e ele é par`;
+        }
+        document.getElementById('x1').innerHTML = `Só há um resultado de x é ${x1} e ele é impar`;
+    }} else if (raiz % 1 !== 0 ){
 // e caso a raiz seja com virgula (não exata) não calculara
         result.innerHTML = `Não há raiz exata`;
+        document.getElementById('x1').innerHTML = ``;
+        document.getElementById('x2').innerHTML = ``;
     }
 
 // define qual x é maior e o coloca na vaga (x1)
@@ -92,6 +104,8 @@ function baskhara() {
             document.getElementById('x2').innerHTML = `O resultado de x2 é ${x2}`;
         }
     }
+
+    
 // Verificador de console (para achar os erros)
     console.log(delta);
     console.log(raiz);
