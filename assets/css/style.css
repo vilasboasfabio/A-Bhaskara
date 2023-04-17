@@ -10,5 +10,25 @@ h2{
 #introduce{
     background-color: black;
     color: azure;
+    text-align: center;
 }
-
+#values{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+input{
+    width: 30%;
+    margin-left: 35%;
+    margin-top: 5%;
+}
+button{
+    width: 30%;
+    margin-left:35.3% ;
+    margin-top: 5%;
+    color: white;
+    background-color: black;
+}
+#resultados{
+    text-align: center;
+}
