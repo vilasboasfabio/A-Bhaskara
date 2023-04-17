@@ -10,8 +10,8 @@ function baskhara() {
     let raiz = Math.sqrt(delta);
 
 // como descobrir o x1 e o x2
-    let x1 = (-b + raiz) / 2 * a;
-    let x2 = (-b - raiz) / 2 * a;
+    let x1 = (-b + raiz) / (2*a);
+    let x2 = (-b - raiz) / (2*a);
 
 // vaga auxiliar para definir o x maior
     let vaga = '';
