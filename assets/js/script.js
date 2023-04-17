@@ -104,6 +104,9 @@ function baskhara() {
             document.getElementById('x2').innerHTML = `O resultado de x2 é ${x2}`;
         }
     }
+    if (delta==0 && raiz==0){
+        document.getElementById('x1').innerHTML = `Há apenas uma raiz e ela é ${x2} e ele é par.`;
+    }
 
     
 // Verificador de console (para achar os erros)
