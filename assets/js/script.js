@@ -1,10 +1,10 @@
 function baskhara() {
 
-    let a = document.getelementsById('numA');
-    let b = document.getelementsById('numB');
-    let c = document.getelementsById('numC');
-    let delta = b ** 2 - 4 * a * c;
-    let raiz = math.sqrt(delta);
+    let a = document.getElementById('numA').value;
+    let b = document.getElementById('numB').value;
+    let c = document.getElementById('numC').value;
+    let delta = (b**2 -4 * a * c);
+    let raiz = Math.sqrt(delta);
     let x1 = (-b + raiz) / 2 * a;
     let x2 = (-b - raiz) / 2 * a;
     let vaga = '';
@@ -24,13 +24,43 @@ function baskhara() {
         let sob1 = x1 % 2;
         let sob2 = x2 % 2;
         if (sob1 == 0 && sob2 == 0){
-            result.innerHTML = `as raizes são ${x1}, ${x2} e ambas são par.`;
+            result.innerHTML = `${x1}, ${x2} e ambas são par.`;
+            document.getElementById('x1').innerHTML = `O resultado de x1 é ${x1}`;
+            document.getElementById('x2').innerHTML = `O resultado de x2 é ${x2}`;
         } else if (sob1 != 0 && sob2 != 0) {
-            result.innerHTML = `as raizes são ${x1}, ${x2} e ambas são impar.`;
+            result.innerHTML = `${x1}, ${x2} e ambas são impar.`;
+            document.getElementById('x1').innerHTML = `O resultado de x1 é ${x1}`;
+            document.getElementById('x2').innerHTML = `O resultado de x2 é ${x2}`;
         } else if (sob1 == 0 && sob2 != 0) {
-            result.innerHTML = `as raizes são ${x1}, ${x2} sendo a primeira par e a segunda impar.`;
+            result.innerHTML = `${x1} é par, ${x2} é impar`;
+            document.getElementById('x1').innerHTML = `O resultado de x1 é ${x1}`;
+            document.getElementById('x2').innerHTML = `O resultado de x2 é ${x2}`;
         } else if (sob2 == 0 && sob1 != 0) {
-            result.innerHTML = `as raizes são ${x1}, ${x2} sendo a primeira impar e a segunda par.`;
+            result.innerHTML = `${x1} é impar, ${x2} é par`;
+            document.getElementById('x1').innerHTML = `O resultado de x1 é ${x1}`;
+            document.getElementById('x2').innerHTML = `O resultado de x2 é ${x2}`;
+        }
+    } else if (x1 > x2) {
+        let sob1 = x1 % 2;
+        let sob2 = x2 % 2;
+        if (sob1 == 0 && sob2 == 0){
+            result.innerHTML = `${x1}, ${x2} e ambas são par.`;
+            document.getElementById('x1').innerHTML = `O resultado de x1 é ${x1}`;
+            document.getElementById('x2').innerHTML = `O resultado de x2 é ${x2}`;
+        } else if (sob1 != 0 && sob2 != 0) {
+            result.innerHTML = `${x1}, ${x2} e ambas são impar.`;
+            document.getElementById('x1').innerHTML = `O resultado de x1 é ${x1}`;
+            document.getElementById('x2').innerHTML = `O resultado de x2 é ${x2}`;
+        } else if (sob1 == 0 && sob2 != 0) {
+            result.innerHTML = `${x1} é par, ${x2} é impar`;
+            document.getElementById('x1').innerHTML = `O resultado de x1 é ${x1}`;
+            document.getElementById('x2').innerHTML = `O resultado de x2 é ${x2}`;
+        } else if (sob2 == 0 && sob1 != 0) {
+            result.innerHTML = `${x1} é impar, ${x2} é par`;
+            document.getElementById('x1').innerHTML = `O resultado de x1 é ${x1}`;
+            document.getElementById('x2').innerHTML = `O resultado de x2 é ${x2}`;
         }
     }
+    console.log(delta);
+    console.log(raiz);
 }
