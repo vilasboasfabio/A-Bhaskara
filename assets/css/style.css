@@ -11,6 +11,7 @@ h2{
     background-color: black;
     color: azure;
     text-align: center;
+    margin: -2%;
 }
 #values{
     display: flex;
@@ -20,15 +21,19 @@ h2{
 input{
     width: 30%;
     margin-left: 35%;
-    margin-top: 5%;
+    margin-top: 2%;
 }
 button{
     width: 30%;
     margin-left:35.3% ;
-    margin-top: 5%;
+    margin-top: 2%;
     color: white;
     background-color: black;
 }
 #resultados{
     text-align: center;
+}
+hr{
+    background-color: darkslateblue;
+    margin-top: 2% ;
 }
