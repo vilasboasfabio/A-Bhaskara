@@ -105,7 +105,7 @@ function baskhara() {
         }
     }
     if (delta==0 && raiz==0){
-        document.getElementById('x1').innerHTML = `Há apenas uma raiz e ela é ${x2} e ele é par.`;
+        document.getElementById('x1').innerHTML = `Há apenas uma raiz e ela é ${x2} e ele é impar.`;
     }
 
     
